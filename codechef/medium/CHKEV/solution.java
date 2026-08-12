@@ -10,11 +10,11 @@ class Codechef
         Scanner sc = new Scanner(System.in);
         int L = sc.nextInt();
         int R = sc.nextInt();
-        for(int i = L;i<=R;i++){
-            if(i%2==0){
-                System.out.println("Yes");
-            }
+        
+         if (L % 2 == 0 || L < R) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
         }
-        System.out.println("No");
 	}
 }
