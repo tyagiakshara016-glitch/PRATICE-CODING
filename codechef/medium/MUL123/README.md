@@ -73,7 +73,7 @@ It can be verified that using fewer than two operations is not enough to make $N
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-12T16:26:16.106Z  
+**Submitted:** 2026-08-12T16:30:18.401Z  
 
 ```java
 import java.util.*;
@@ -89,7 +89,17 @@ class Codechef
 		int T = sc.nextInt();
 		while(T --> 0){
 		    int N = sc.nextInt();
+		     int ans = N % 3;
 		    
+
+            // Option 2: Jump to the next multiple of 5
+            int next5 = ((N / 5) + 1) * 5;
+
+            int operations = 1 + (next5 % 3);
+
+            ans = Math.min(ans, operations);
+
+            System.out.println(ans);
 		}
 
 	}
