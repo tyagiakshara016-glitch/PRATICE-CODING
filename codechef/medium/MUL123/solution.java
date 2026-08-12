@@ -11,7 +11,17 @@ class Codechef
 		int T = sc.nextInt();
 		while(T --> 0){
 		    int N = sc.nextInt();
+		     int ans = N % 3;
 		    
+
+            // Option 2: Jump to the next multiple of 5
+            int next5 = ((N / 5) + 1) * 5;
+
+            int operations = 1 + (next5 % 3);
+
+            ans = Math.min(ans, operations);
+
+            System.out.println(ans);
 		}
 
 	}
