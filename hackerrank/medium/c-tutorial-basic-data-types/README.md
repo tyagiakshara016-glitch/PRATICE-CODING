@@ -60,7 +60,7 @@ Print each element on a new line in the same order it was received as input. Not
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T06:55:23.844Z  
+**Submitted:** 2026-08-17T06:55:52.658Z  
 
 ```cpp
 #include <iostream>
@@ -83,7 +83,7 @@ int main() {
     cout<<b<<endl;
     cout<<a<<endl;
     cout<<c<<endl;
-    cout<<d<<endl;
+    cout<<fixed<<d<<endl;
     cout<<fixed<<e<<endl;
     return 0;
 }
