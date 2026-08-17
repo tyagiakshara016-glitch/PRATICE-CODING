@@ -18,7 +18,7 @@ int main() {
     cout<<b<<endl;
     cout<<a<<endl;
     cout<<c<<endl;
-    cout<<d<<endl;
+    cout<<fixed<<d<<endl;
     cout<<fixed<<e<<endl;
     return 0;
 }
