@@ -55,7 +55,7 @@ Output
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-02T15:05:04.290Z  
+**Submitted:** 2026-09-02T15:05:28.075Z  
 
 ```java
 import java.util.*;
@@ -70,14 +70,8 @@ class Codechef
     Scanner sc=new Scanner(System.in);
     int S=sc.nextInt();
     
-   while(int i<5){
-       if(S%i==0){
-           i++;
-       }else{
-          System.out.println(i); 
-       }
-   }
-  
+   int a=10-S;
+  System.out.println(a);
 	}
 }
 ```
