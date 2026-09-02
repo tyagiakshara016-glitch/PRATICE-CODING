@@ -10,13 +10,7 @@ class Codechef
     Scanner sc=new Scanner(System.in);
     int S=sc.nextInt();
     
-   while(int i<5){
-       if(S%i==0){
-           i++;
-       }else{
-          System.out.println(i); 
-       }
-   }
-  
+   int a=10-S;
+  System.out.println(a);
 	}
 }
