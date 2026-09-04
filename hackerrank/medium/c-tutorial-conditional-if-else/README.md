@@ -1,4 +1,4 @@
-# Basic Data Types
+# Conditional Statements
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -66,32 +66,80 @@ If $1 \le n \le 9$, then print the lowercase English word corresponding to the n
 **Language:** C++  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-08-17T06:55:58.816Z  
+**Submitted:** 2026-09-04T17:45:36.292Z  
 
 ```cpp
-#include <iostream>
-#include <cstdio>
+#include <bits/stdc++.h>
+
 using namespace std;
 
-int main() {
-    // Complete the code.
-    long b;
-    long a;
-    
-    char c; 
-    double d;
-    double e;
-    cin>>b;
-    cin>>a;
-    cin>>c;
-    cin>>d;
-    cin>>e;
-    cout<<b<<endl;
-    cout<<a<<endl;
-    cout<<c<<endl;
-    cout<<fixed<<d<<endl;
-    cout<<fixed<<e<<endl;
-    return 0;
+string ltrim(const string &);
+string rtrim(const string &);
+
+
+
+int main()
+{
+    string n_temp;
+    getline(cin, n_temp);
+
+    int n = stoi(ltrim(rtrim(n_temp)));
+
+    // Write your code here
+    if(n == 1){
+    cout << "one";
+    }
+    else if(n == 2){
+    cout << "two";
+    }
+    else if(n == 3){
+    cout << "three";
+    }
+    else if(n == 4){
+    cout << "four";
+    }
+    else if(n == 5){
+    cout << "five";
+    }
+    else if(n == 6){
+    cout << "six";
+    }
+    else if(n == 7){
+    cout << "seven";
+    }
+    else if(n == 8){
+        cout << "eight";
+    }
+    else if(n==9){
+        cout<<"nine";
+    }
+    else{
+    cout << "Greater than 9";
+    }
+
+return 0;
+}
+
+string ltrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        s.begin(),
+        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
+    );
+
+    return s;
+}
+
+string rtrim(const string &str) {
+    string s(str);
+
+    s.erase(
+        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
+        s.end()
+    );
+
+    return s;
 }
 
 ```
