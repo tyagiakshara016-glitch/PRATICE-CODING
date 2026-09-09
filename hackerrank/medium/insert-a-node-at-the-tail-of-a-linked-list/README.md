@@ -1,4 +1,4 @@
-# Print the Elements of a Linked List
+# Insert a Node at the Tail of a Linked List
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -39,12 +39,12 @@ The next $n$ lines contain an integer each, the value that needs to be inserted 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T15:24:08.202Z  
+**Submitted:** 2026-09-09T16:17:05.950Z  
 
 ```java
 
 
-    // Complete the printLinkedList function below.
+    // Complete the insertNodeAtTail function below.
 
     /*
      * For your reference:
@@ -55,14 +55,26 @@ The next $n$ lines contain an integer each, the value that needs to be inserted 
      * }
      *
      */
-    static void printLinkedList(SinglyLinkedListNode head) {
-        SinglyLinkedListNode current = head;
-        while(current!=null){
-            System.out.println(current.data);
-            current = current.next;
-        }
+    static SinglyLinkedListNode insertNodeAtTail(
+        SinglyLinkedListNode head, int data) {
 
+    SinglyLinkedListNode newNode =
+        new SinglyLinkedListNode(data);
+
+    if (head == null) {
+        return newNode;
     }
+
+    SinglyLinkedListNode curr = head;
+
+    while (curr.next != null) {
+        curr = curr.next;
+    }
+
+    curr.next = newNode;
+
+    return head;
+}
 
 
 ```
