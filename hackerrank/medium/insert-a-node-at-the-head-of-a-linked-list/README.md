@@ -34,7 +34,7 @@ The next $n$ lines contain an integer each, the elements to be inserted, one per
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T16:23:59.386Z  
+**Submitted:** 2026-09-09T16:31:30.377Z  
 
 ```java
 
