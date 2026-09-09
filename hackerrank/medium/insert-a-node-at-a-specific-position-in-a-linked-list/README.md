@@ -51,7 +51,7 @@ The last line contains an integer $position$.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T16:24:21.991Z  
+**Submitted:** 2026-09-09T16:31:32.943Z  
 
 ```java
 
