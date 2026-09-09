@@ -1,4 +1,4 @@
-# Insert a Node at the Tail of a Linked List
+# Insert a node at the head of a linked list
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -34,12 +34,12 @@ The next $n$ lines contain an integer each, the elements to be inserted, one per
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-09T16:17:09.409Z  
+**Submitted:** 2026-09-09T16:23:59.386Z  
 
 ```java
 
 
-    // Complete the insertNodeAtTail function below.
+    // Complete the insertNodeAtHead function below.
 
     /*
      * For your reference:
@@ -50,26 +50,12 @@ The next $n$ lines contain an integer each, the elements to be inserted, one per
      * }
      *
      */
-    static SinglyLinkedListNode insertNodeAtTail(
-        SinglyLinkedListNode head, int data) {
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+            SinglyLinkedListNode newNo = new SinglyLinkedListNode(data);
+            newNo.next = llist;
+            return newNo;
 
-    SinglyLinkedListNode newNode =
-        new SinglyLinkedListNode(data);
-
-    if (head == null) {
-        return newNode;
     }
-
-    SinglyLinkedListNode curr = head;
-
-    while (curr.next != null) {
-        curr = curr.next;
-    }
-
-    curr.next = newNode;
-
-    return head;
-}
 
 
 ```
