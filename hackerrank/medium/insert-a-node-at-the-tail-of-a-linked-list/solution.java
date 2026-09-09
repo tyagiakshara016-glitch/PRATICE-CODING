@@ -1,6 +1,6 @@
 
 
-    // Complete the printLinkedList function below.
+    // Complete the insertNodeAtTail function below.
 
     /*
      * For your reference:
@@ -11,12 +11,24 @@
      * }
      *
      */
-    static void printLinkedList(SinglyLinkedListNode head) {
-        SinglyLinkedListNode current = head;
-        while(current!=null){
-            System.out.println(current.data);
-            current = current.next;
-        }
+    static SinglyLinkedListNode insertNodeAtTail(
+        SinglyLinkedListNode head, int data) {
 
+    SinglyLinkedListNode newNode =
+        new SinglyLinkedListNode(data);
+
+    if (head == null) {
+        return newNode;
     }
+
+    SinglyLinkedListNode curr = head;
+
+    while (curr.next != null) {
+        curr = curr.next;
+    }
+
+    curr.next = newNode;
+
+    return head;
+}
 
