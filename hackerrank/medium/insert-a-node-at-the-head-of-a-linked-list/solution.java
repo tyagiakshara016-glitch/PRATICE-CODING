@@ -1,6 +1,6 @@
 
 
-    // Complete the insertNodeAtTail function below.
+    // Complete the insertNodeAtHead function below.
 
     /*
      * For your reference:
@@ -11,24 +11,10 @@
      * }
      *
      */
-    static SinglyLinkedListNode insertNodeAtTail(
-        SinglyLinkedListNode head, int data) {
+    static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+            SinglyLinkedListNode newNo = new SinglyLinkedListNode(data);
+            newNo.next = llist;
+            return newNo;
 
-    SinglyLinkedListNode newNode =
-        new SinglyLinkedListNode(data);
-
-    if (head == null) {
-        return newNode;
     }
-
-    SinglyLinkedListNode curr = head;
-
-    while (curr.next != null) {
-        curr = curr.next;
-    }
-
-    curr.next = newNode;
-
-    return head;
-}
 
