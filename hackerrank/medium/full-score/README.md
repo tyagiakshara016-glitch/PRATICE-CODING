@@ -1,4 +1,4 @@
-# The Report
+# Top Competitors
 
 ![Difficulty](https://img.shields.io/badge/Difficulty-Medium-yellow)
 
@@ -33,23 +33,26 @@ The following tables contain contest data:
 **Language:** SQL  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-01T06:37:04.675Z  
+**Submitted:** 2026-10-01T06:40:07.963Z  
 
 ```sql
 /*
 Enter your query here.
 */
-SELECT
-    CASE WHEN g.Grade >= 8 THEN s.Name ELSE 'NULL' END AS Name,
-    g.Grade,
-    s.Marks
-FROM Students s
-JOIN Grades g
-    ON s.Marks BETWEEN g.Min_Mark AND g.Max_Mark
+SELECT h.hacker_id, h.name
+FROM Hackers h
+JOIN Submissions s
+    ON h.hacker_id = s.hacker_id
+JOIN Challenges c
+    ON s.challenge_id = c.challenge_id
+JOIN Difficulty d
+    ON c.difficulty_level = d.difficulty_level
+WHERE s.score = d.score
+GROUP BY h.hacker_id, h.name
+HAVING COUNT(DISTINCT s.challenge_id) > 1
 ORDER BY
-    g.Grade DESC,
-    CASE WHEN g.Grade >= 8 THEN s.Name END ASC,
-    CASE WHEN g.Grade < 8 THEN s.Marks END ASC;
+    COUNT(DISTINCT s.challenge_id) DESC,
+    h.hacker_id ASC;
 
 ```
 
