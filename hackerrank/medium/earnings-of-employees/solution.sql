@@ -1,5 +1,10 @@
 /*
 Enter your query here.
 */
-SELECT CEIL(AVG(Salary) - AVG(REPLACE(Salary, '0', '')))
-FROM EMPLOYEES;
+SELECT MAX(salary * months),
+       COUNT(*)
+FROM Employee
+WHERE salary * months = (
+    SELECT MAX(salary * months)
+    FROM Employee
+);
